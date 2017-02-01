@@ -1,3 +1,6 @@
+---
+maintainer: andrey9kin
+---
 # yocto-build-container
 
 ## Intro
