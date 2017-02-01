@@ -1,3 +1,4 @@
+[![Build Status](https://api.travis-ci.org/Praqma/yocto-build-container.svg?branch=master)](https://travis-ci.org/Praqma/yocto-build-container)
 ---
 maintainer: andrey9kin
 ---
