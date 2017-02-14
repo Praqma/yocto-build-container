@@ -1,5 +1,5 @@
 # Base image for building Yocto images
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 # Add support for proxies.
 # Values should be passed as build args
