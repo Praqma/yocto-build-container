@@ -1,5 +1,5 @@
 # Base image for building Yocto images
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 # Add support for proxies.
 # Values should be passed as build args
@@ -11,10 +11,12 @@ ENV no_proxy ${no_proxy:-}
 ENV DEBIAN_FRONTEND noninteractive
 
 # Yocto's depends
-# Taken from here http://www.yoctoproject.org/docs/2.1/mega-manual/mega-manual.html#packages
+# Taken from here https://www.yoctoproject.org/docs/2.6.1/mega-manual/mega-manual.html
 RUN apt-get -qq --yes update && \
     apt-get -qq --yes install gawk wget git-core diffstat unzip \
-    texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev \
+    texinfo gcc-multilib build-essential chrpath socat cpio \
+    python python3 python3-pip python3-pexpect \
+    xz-utils debianutils iputils-ping libsdl1.2-dev \
     xterm && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
